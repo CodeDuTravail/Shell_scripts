@@ -3,7 +3,7 @@
 A collection of shell scripts for various purposes.
 
 * 1st_run_you_only_launch_once.sh
-    A script for first run on a fresh build server
+    >A script for first run on a fresh build server
     - Set Hostname
     - Configure IP static, DNS servers
     - SSH Port modification
