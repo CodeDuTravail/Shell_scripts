@@ -10,6 +10,14 @@ A collection of shell scripts for various purposes.
     - User creation
     - Packages install
 
+* ssh_key_n_config.sh
+    ```bash
+    Usage: ./ssh_key_n_config.sh user@server:port
+    ```
+    >What do this script ?
+    - Generate a ed25519 SSH Key
+    - Configure an entry for the user@host:port in ~/.ssh/config
+    - Copy ssh key with ssh-copy-id to the target host
 
 * cert_expiration.sh
     >A simple script to check SSL certificate expiration date and send an alert mail 7 days before it expire. 
