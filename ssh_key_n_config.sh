@@ -7,7 +7,7 @@
 # Check if argument is provided
 if [ $# -eq 0 ]; then
     echo "Usage: $0 user@server:port"
-    echo "Example: $0 john_w@example.com:22"
+    echo "Example: $0 john@example.com:2222"
     exit 1
 fi
 
@@ -40,7 +40,7 @@ echo "  Port: $ssh_port"
 echo
 
 # Define key file path
-key_file="$HOME/.ssh/id_ed25519_$user_name"
+key_file="$HOME/.ssh/id_ed25519_$user_name-$target_server"
 
 # Check if key already exists
 if [ -f "$key_file" ]; then
@@ -76,7 +76,7 @@ echo
 
 # Create SSH config entry
 config_file="$HOME/.ssh/config"
-host_entry="$user_name@$target_server"
+host_entry="$user_name.$target_server"
 
 # Check if host entry already exists in config
 if [ -f "$config_file" ] && grep -q "^Host $host_entry$" "$config_file"; then
@@ -119,7 +119,7 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
     echo "Copying public key to server..."
     echo "You may be prompted for your password on the remote server."
     
-    sudo ssh-copy-id -p $ssh_port -i "${key_file}.pub" "$user_name@$target_server"
+    ssh-copy-id -p $ssh_port -i "${key_file}.pub" "$user_name@$target_server"
     
     if [ $? -eq 0 ]; then
         echo
