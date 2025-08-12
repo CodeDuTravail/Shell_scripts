@@ -7,7 +7,7 @@ A collection of shell scripts for various purposes.
     - Set Hostname
     - Configure IP static, DNS servers
     - SSH Port modification
-    - User creation
+    - Sudoer user creation
     - Packages install
 
 * ssh_key_n_config.sh
