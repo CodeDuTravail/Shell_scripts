@@ -496,7 +496,7 @@ else
 	echo "Requiring ANSI Shadow.flf, downloading it..."
 	echo "          ------------------------------------- "
 	echo
-	cd /src && wget https://raw.githubusercontent.com/xero/figlet-fonts/refs/heads/master/ANSI%20Shadow.flf
+	cd /src && wget https://raw.githubusercontent.com/xero/figlet-fonts/refs/heads/master/ANSI%20Shadow.flf
 	echo
 fi
 
