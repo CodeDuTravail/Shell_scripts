@@ -4,8 +4,8 @@
 #
 # Purpose: First script to run. Accepts command line arguments or prompts for inputs.
 #
-# Usage: ./yolo.sh [user@hostname:port] [ip_address/cidr]
-# Example: ./yolo.sh mercy@myserver:2222 192.168.1.50/24
+# Usage: ./yolo.sh run [user@hostname:port] [ip_address/cidr] [-y]
+# Example: ./yolo.sh run mercy@myserver:2222 192.168.1.50/24
 #
 # Arguments (all optional):
 #   1. user@hostname:port - Username, hostname and SSH port in format user@hostname:port
@@ -20,6 +20,9 @@
 #	- Create a sudoer user 
 #	- Packages update & install 
 #	- Set hostname, backup /etc/hosts, substitute the old hostname entry with the defined one and rotate the files.
+#   - Network configuration : IP address, subnet & gateway
+#   - SSH port reconfiguration
+#   - Generate MOTD files
 #
 # -------------------------------------------------------------------------------
 

@@ -3,12 +3,16 @@
 A collection of shell scripts for various purposes.
 
 * 1st_run_you_only_launch_once.sh
-    >A script for first run on a fresh build server
+    ```bash
+    Usage: ./yolo.sh run [user@hostname:port] [ip_address/cidr] -y
+    ```
+    >A script for a first run on a fresh build debian server.
     - Set Hostname
     - Configure IP static, DNS servers
     - SSH Port modification
-    - Sudoer user creation
+    - Define sudoer user & password creation
     - Packages install
+    - MOTD Files generation
 
 * ssh_key_n_config.sh
     ```bash
