@@ -511,7 +511,7 @@ cat >> /etc/motd << EOF
 
 EOF
 
-figlet -f "ANSI Shadow.flf" PITAYA >> /etc/motd
+figlet -f "ANSI Shadow.flf" $short_hostname >> /etc/motd
 
 cat >> /etc/motd << EOF
 
