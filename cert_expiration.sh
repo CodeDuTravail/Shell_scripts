@@ -19,7 +19,7 @@ _openssl="/usr/bin/openssl"
 
 $_openssl x509 -enddate -noout -in "$CERT"  -checkend "$DAYS" | grep -q 'Certificate will expire'
  
-# Send email and push message to my mobile
+# Send email
 if [ $? -eq 0 ]
 then
 	echo "${_sub}"
