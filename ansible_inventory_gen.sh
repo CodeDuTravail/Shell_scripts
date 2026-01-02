@@ -1,5 +1,14 @@
 #!/bin/bash
 
+################################################################################################################
+
+# Input file hosts_checklist.txt only needs hostnames in it, nslookup task is done to retrieve IP.
+# Only if host reacts to ping, it's added to ansible inventory
+
+# /!\ SSH Arg StrictHostKeyChecking=no Set for cases of cloned templates by laziest admins.
+
+################################################################################################################
+
 # Configuration variables
 INPUT_FILE="hosts_checklist.txt"
 LOG_FILE="hosts_checked.txt"
